@@ -1,0 +1,10 @@
+{
+    "inputs": [
+        {
+          "name": "content",
+          "shape": [1],
+          "datatype": "BYTES",
+          "data": ["mi impresora no imprime a color, solucionarlo"]
+        }
+    ]
+}

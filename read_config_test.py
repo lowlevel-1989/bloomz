@@ -1,4 +1,8 @@
 # v0.8.2
+# REF: https://kserve.github.io/website/0.8/modelserving/v1beta1/torchserve/#create-the-torchserve-inferenceservice
+# REF: https://pytorch.org/serve/custom_service.html#custom-handlers
+# REF: https://github.com/kserve/kserve/tree/master/python/kserve/docs
+# REF: https://github.com/pytorch/serve/tree/v0.8.2/examples/large_models/Huggingface_accelerate
 # REF: https://github.com/pytorch/serve/blob/v0.8.2/kubernetes/kserve/kserve_wrapper/__main__.py
 # REF: https://github.com/pytorch/serve/blob/v0.8.2/kubernetes/kserve/kserve_wrapper/TorchserveModel.py
 # REF: https://github.com/kserve/kserve/blob/release-0.8/python/kserve/kserve/model.py
