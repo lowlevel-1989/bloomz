@@ -4,7 +4,7 @@
           "name": "content",
           "shape": [1],
           "datatype": "BYTES",
-          "data": ["mi impresora no imprime a color, solucionarlo"]
+          "data": ["@Walmart los precios en la tienda no coinciden con los precios en línea. Mal servicio"]
         }
     ]
 }

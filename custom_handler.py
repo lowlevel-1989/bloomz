@@ -1,3 +1,5 @@
+# REF: https://kserve.github.io/website/0.8/modelserving/inference_api/#inference-request-examples
+
 import os
 import json
 import zipfile
@@ -107,9 +109,19 @@ class ModelHandler(BaseHandler, ABC):
         # TODO: soportar todas las entradas en un solo request
         # Solo me quedo con el ultimo
         for idx, data in enumerate(requests):
+
+            # detectar torchserve
             input_text = data.get("data")
+
             if input_text is None:
                 input_text = data.get("body")
+
+                # detectar kserve
+                if isinstance(input_text, dict):
+                    input_text = input_text["inputs"][0]["data"][0]
+
+            if isinstance(input_text, list):
+                input_text = input_text[0]
 
             inputs = self.tokenizer(
                 f"{self.text_column} : {input_text} Label : ",
@@ -149,4 +161,15 @@ class ModelHandler(BaseHandler, ABC):
         Returns:
             (list): Returns a list of the Predictions and Explanations.
         """
-        return inference_output
+
+        output = {
+            "name":     "content",
+            "shape":    [1],
+            "datatype": "BYTES",
+            "data":     [inference_output[0]]
+        }
+
+        return [{
+            "id":      "bloomz",
+            "outputs": [output],
+        }]
