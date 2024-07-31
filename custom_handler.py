@@ -44,10 +44,12 @@ class ModelHandler(BaseHandler, ABC):
         logger.info(properties)
         model_dir = properties.get("model_dir")
 
+        """
         logger.info("snapshot")
         for root, dirs, files in os.walk(model_dir):
             for file in files:
                 logger.info(f" - {file}")
+        """
 
         model_metadata = None
         with open(f"{model_dir}/setup_config.json") as f:
