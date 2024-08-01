@@ -1,0 +1,9 @@
+REF: https://kserve.github.io/website/0.8/modelserving/inference_api/
+REF: https://github.com/pytorch/serve/blob/v0.8.2/kubernetes/kserve/kserve_wrapper/__main__.py
+REF: https://github.com/pytorch/serve/blob/v0.8.2/ts/torch_handler/base_handler.py#L107
+REF: https://kserve.github.io/website/0.8/modelserving/v1beta1/torchserve/
+REF: https://pytorch.org/serve/custom_service.html
+REF: https://github.com/kserve/kserve/tree/master/python/kserve/docs
+REF: https://github.com/kubeflow/kfp-tekton/tree/master/samples
+REF: https://github.com/pytorch/serve/blob/v0.8.2/examples/large_models/Huggingface_accelerate/custom_handler.py
+REF: https://hubgw.docker.com/r/pytorch/torchserve-kfs/tags
